@@ -83,7 +83,7 @@ public class TweetController {
         return tweetRepository.findOne(id);
     }
 
-    @RequestMapping("/follow/{follower}/{followee}")
+    @RequestMapping("/follow/{followee}/{follower}")
     public ResponseEntity follow(@PathVariable("follower") String followerHandle, @PathVariable("followee") String followeeHandle) {
         if (followerHandle == followeeHandle) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

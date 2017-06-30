@@ -1,7 +1,7 @@
 <template>
   <p v-if="loading" >Chargement des tweets en cours…</p>
   <ul v-else >
-    <li v-for="tweet in tweets" ><tweet @retweeted="retweet" :tweet="tweet" :utilisateur="utilisateur" /></li>
+    <li v-for="tweet in tweets" class="tweet" ><tweet @retweeted="retweet" :tweet="tweet" :utilisateur="utilisateur" /></li>
   </ul>
 </template>
 

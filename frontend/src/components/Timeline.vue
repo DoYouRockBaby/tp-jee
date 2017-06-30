@@ -1,7 +1,5 @@
 <template>
   <div class="timeline">
-    <h1>Je suis une poule</h1>
-
     <postTweet :utilisateur="currentUtilisateur" @tweeted="tweeted" />
     <utilisateurs :utilisateurs="utilisateurs" @utilisateurChanged="utilisateurChanged" />
     <feeds @click="retweet()" :utilisateur="currentUtilisateur" :tweets="sortedTweets" :loading="loading" @retweeted="retweet" />
